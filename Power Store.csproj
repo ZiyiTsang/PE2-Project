@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Product.xml" />
+    <Content Include="Page\ItemDetail.aspx" />
     <Content Include="Page\Market.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -197,6 +198,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Models\Repo.cs" />
+    <Compile Include="Page\ItemDetail.aspx.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\ItemDetail.aspx.designer.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Market.aspx.cs">
       <DependentUpon>Market.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

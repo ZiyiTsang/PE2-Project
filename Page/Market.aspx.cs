@@ -21,7 +21,7 @@ namespace Power_Store
             }
             repo = (Repo)Session["Repo"];
 
-            repeat_view_product.DataSource = repo.Product_list;
+            repeat_view_product.DataSource = repo.Product_list.Values;
             repeat_view_product.DataBind();
 
             if (Session["Cart"] == null)
@@ -45,7 +45,7 @@ namespace Power_Store
         {
             Button button = (Button)sender;
             int good_id = int.Parse(button.CommandArgument.ToString());
-            string redirectUrl = "YourDestinationPage.aspx?good_id=" + good_id;
+            string redirectUrl = "ItemDetail.aspx?good_id=" + good_id;
             Response.Redirect(redirectUrl);
         }
 
