@@ -102,8 +102,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Page\Customer_Market.aspx" />
+    <Content Include="Page\About.aspx" />
+    <Content Include="Page\Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -122,10 +123,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Market.aspx" />
-    <Content Include="NothingBuy.aspx" />
-    <Content Include="PaymentPage.aspx" />
+    <Content Include="Page\Market.aspx" />
+    <Content Include="Page\NothingBuy.aspx" />
+    <Content Include="Page\PaymentPage.aspx" />
     <Content Include="Resource\Image\pillow.jpg" />
+    <Content Include="MasterPage\Main.Master" />
     <None Include="Resource\Image\WatterBottle.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -190,45 +192,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Page\Customer_Market.aspx.cs">
+      <DependentUpon>Customer_Market.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Customer_Market.aspx.designer.cs">
+      <DependentUpon>Customer_Market.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Page\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Page\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Page\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Page\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Market.aspx.cs">
+    <Compile Include="Page\Market.aspx.cs">
       <DependentUpon>Market.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Market.aspx.designer.cs">
+    <Compile Include="Page\Market.aspx.designer.cs">
       <DependentUpon>Market.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Item.cs" />
-    <Compile Include="NothingBuy.aspx.cs">
+    <Compile Include="Page\NothingBuy.aspx.cs">
       <DependentUpon>NothingBuy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NothingBuy.aspx.designer.cs">
+    <Compile Include="Page\NothingBuy.aspx.designer.cs">
       <DependentUpon>NothingBuy.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PaymentPage.aspx.cs">
+    <Compile Include="Page\PaymentPage.aspx.cs">
       <DependentUpon>PaymentPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PaymentPage.aspx.designer.cs">
+    <Compile Include="Page\PaymentPage.aspx.designer.cs">
       <DependentUpon>PaymentPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
