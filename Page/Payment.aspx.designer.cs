@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Power_Store
+namespace Power_Store.Page
 {
 
 
-    public partial class PaymentPage
+    public partial class Payment
     {
 
         /// <summary>

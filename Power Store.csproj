@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Product.xml" />
     <Content Include="Page\Market.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -122,10 +123,18 @@
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Page\NothingBuy.aspx" />
-    <Content Include="Page\PaymentPage.aspx" />
+    <Content Include="Page\Payment.aspx" />
+    <Content Include="Resource\Image\fullMark.jpg" />
+    <Content Include="Resource\Image\iphone.jpg" />
+    <Content Include="Resource\Image\laptop.png" />
+    <Content Include="Resource\Image\Mirror.jpg" />
+    <Content Include="Resource\Image\pikachu.jpg" />
     <Content Include="Resource\Image\pillow.jpg" />
     <Content Include="MasterPage\Main.Master" />
+    <None Include="Properties\PublishProfiles\PowerStore - Web Deploy.pubxml" />
     <None Include="Resource\Image\WatterBottle.jpg" />
+    <Content Include="Resource\Image\shop.jfif" />
+    <Content Include="Resource\Image\TV.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -187,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Models\Repo.cs" />
     <Compile Include="Page\Market.aspx.cs">
       <DependentUpon>Market.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,12 +224,12 @@
     <Compile Include="Page\NothingBuy.aspx.designer.cs">
       <DependentUpon>NothingBuy.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page\PaymentPage.aspx.cs">
-      <DependentUpon>PaymentPage.aspx</DependentUpon>
+    <Compile Include="Page\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page\PaymentPage.aspx.designer.cs">
-      <DependentUpon>PaymentPage.aspx</DependentUpon>
+    <Compile Include="Page\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -236,7 +246,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

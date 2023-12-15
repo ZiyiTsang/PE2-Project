@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Power_Store.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,9 +14,10 @@ namespace Power_Store
     {
         void Application_Start(object sender, EventArgs e)
         {
-            // 在应用程序启动时运行的代码
+            
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
         }
     }
 }

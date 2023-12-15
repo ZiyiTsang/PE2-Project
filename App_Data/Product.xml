@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+	<Product>
+		<Id>1</Id>
+		<Name>Pillow</Name>
+		<Price>70</Price>
+		<Description>Pillow is a comfortable and high-quality pillow product that provides you with a good sleep experience and neck support, helping you achieve comfortable sleep and relaxed rest.</Description>
+		<ImageURL>~/Resource/Image/pillow.jpg</ImageURL>
+	</Product>
+	<Product>
+		<Id>2</Id>
+		<Name>Iphone 13</Name>
+		<Price>2000</Price>
+		<Description>Newest Iphone</Description>
+		<ImageURL>~/Resource/Image/iphone.jpg</ImageURL>
+	</Product>
+	<Product>
+		<Id>3</Id>
+		<Name>Pikachu</Name>
+		<Price>40</Price>
+		<Description>Pikachu stickers are carefully designed and produced, each sticker showcasing Pikachu's unique charm and cute image.</Description>
+		<ImageURL>~/Resource/Image/pikachu.jpg</ImageURL>
+	</Product>
+	<Product>
+		<Id>4</Id>
+		<Name>Laptop</Name>
+		<Price>3000</Price>
+		<Description>A laptop is a portable personal computer device that can be used for office, learning, entertainment, and various other tasks</Description>
+		<ImageURL>~/Resource/Image/laptop.png</ImageURL>
+	</Product>
+	<Product>
+		<Id>5</Id>
+		<Name>Mirror</Name>
+		<Price>3000</Price>
+		<Description>Mirrors help people observe their appearance, organize clothing, or apply makeup</Description>
+		<ImageURL>~/Resource/Image/Mirror.jpg</ImageURL>
+	</Product>
+	<Product>
+		<Id>6</Id>
+		<Name>Full Marks potion</Name>
+		<Price>39999</Price>
+		<Description>You will receive full marks for your PE final exam results in after purchasing.</Description>
+		<ImageURL>~/Resource/Image/fullMark.jpg</ImageURL>
+	</Product>
+</Products>
