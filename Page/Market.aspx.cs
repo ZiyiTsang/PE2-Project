@@ -8,13 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace Power_Store
 {
-    public partial class Market : System.Web.UI.Page
+    public partial class Customer_Market : System.Web.UI.Page
     {
         private Dictionary<int, Item> Product_list { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Cart"]==null) {
+            if (Session["Cart"] == null)
+            {
                 Session["Cart"] = new Cart();
             }
             Product_list = new Dictionary<int, Item>();
@@ -25,23 +26,17 @@ namespace Power_Store
             Product_list.Add(5, new Item(5, "Mirror", 3000, "Mirrors help people observe their appearance, organize clothing, or apply makeup", "~/Resource/Image/Mirror.jpg"));
             Product_list.Add(6, new Item(6, "Full Marks potion", 39999, "You will receive full marks for your PE final exam results in after purchasing.", "~/Resource/Image/fullMark.jpg"));
 
-
-
-
             repeat_view_product.DataSource = Product_list.Values;
             repeat_view_product.DataBind();
-
-
         }
         protected void Buy_click(object sender, EventArgs e)
         {
             Cart local_cart = (Cart)Session["Cart"];
             Button button = (Button)sender;
             int good_id = int.Parse(button.CommandArgument.ToString());
-            Item good=Product_list[good_id];
+            Item good = Product_list[good_id];
             local_cart.AddItem(good);
             Session["Cart"] = local_cart;
-
             string script = "alert('Add to cart successful');";
             ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
 
