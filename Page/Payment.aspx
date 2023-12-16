@@ -60,28 +60,29 @@
                 <div class="row g-3">
                     <div class="col-sm-6">
                         <label for="firstName" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="">
+                        <asp:TextBox ID="firstName" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
 
 
                     <div class="col-sm-6">
                         <label for="lastName" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="">
+                        <asp:TextBox ID="lastName" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
 
                     <div class="col-12">
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="email">
+
+                            <asp:TextBox ID="emailFirst" runat="server" CssClass="form-control"></asp:TextBox>
                             <span class="input-group-text">@</span>
-                            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                            <asp:TextBox ID="emailServer" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
 
                     <div class="col-12">
                         <label for="address" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                        <asp:TextBox ID="address1" runat="server" CssClass="form-control" Text="1234 Main St"></asp:TextBox>
                     </div>
 
                     <div class="col-12">
@@ -89,21 +90,19 @@
                         <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
                     </div>
 
-                    <div class="col-md-5">
+                    <div class="col-md-9">
                         <label for="country" class="form-label">Country</label>
-                        <select class="form-select" id="country">
-                            <option value="">Choose...</option>
-                            <option>United States</option>
-                        </select>
+
+                        <asp:DropDownList ID="country1" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="United States" Value="United States"></asp:ListItem>
+                            <asp:ListItem Text="Malaysia" Value="Malaysia"></asp:ListItem>
+                            <asp:ListItem>China</asp:ListItem>
+                            <asp:ListItem>Chinese Hong Kong</asp:ListItem>
+                            <asp:ListItem>Canada</asp:ListItem>
+                            <asp:ListItem>Mexico</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="state" class="form-label">State</label>
-                        <select class="form-select" id="state">
-                            <option value="">Choose...</option>
-                            <option>California</option>
-                        </select>
-                    </div>
 
                     <div class="col-md-3">
                         <label for="zip" class="form-label">Zip</label>

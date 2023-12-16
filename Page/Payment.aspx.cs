@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Optimization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -36,8 +37,41 @@ namespace Power_Store.Page
         }
         protected void Submit_click(object sender, EventArgs e)
         {
-            string script = $"alert('Pay Successful ! Thank you! ') ";
-            ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+            Session["Cart"] = null;
+            
+            Order order = get_order_detail();
+
+            string script = null;
+            string write_return = order.AppendToXml();
+            if (write_return.Equals("OK"))
+            {
+                script = "alert('Pay Successful! Thank you!');";
+                
+                //Response.Redirect("Market.aspx");
+            }
+            else
+            {
+                script= "alert('" + write_return + "');";
+                
+            }
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+
+
+
+
         }
+        protected Order get_order_detail()
+        {
+            string firstname = firstName.Text;
+            string lastname = lastName.Text;
+            string address = address1.Text;
+            string country = country1.Text;
+            string time= DateTime.Now.ToString();
+            string price = TotalPrice.Text;
+            string email = emailFirst.Text + "@" + emailServer.Text;
+            return new Order(firstname, lastname, address, country, time, price,email);
+        }
+        
+
     }
 }
