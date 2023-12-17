@@ -9,14 +9,21 @@
         <div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="XmlDataSource1" CssClass="table table-striped">
                 <Columns>
-                    <asp:BoundField DataField="first_name" HeaderText="first_name" SortExpression="first_name"></asp:BoundField>
-                    <asp:BoundField DataField="last_name" HeaderText="last_name" SortExpression="last_name"></asp:BoundField>
-                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
-                    <asp:BoundField DataField="country" HeaderText="country" SortExpression="country"></asp:BoundField>
-                    <asp:BoundField DataField="time" HeaderText="time" SortExpression="time"></asp:BoundField>
-                    <asp:BoundField DataField="email" HeaderText="email" SortExpression="email"></asp:BoundField>
-                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price"></asp:BoundField>
-                    </Columns>
+                    <asp:BoundField DataField="id" HeaderText="ID" SortExpression="id"></asp:BoundField>
+                    <asp:BoundField DataField="first_name" HeaderText="First Name" SortExpression="first_name"></asp:BoundField>
+                    <asp:BoundField DataField="last_name" HeaderText="Last Name" SortExpression="last_name"></asp:BoundField>
+                    <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address"></asp:BoundField>
+                    <asp:BoundField DataField="country" HeaderText="Country" SortExpression="country"></asp:BoundField>
+                    <asp:BoundField DataField="time" HeaderText="Time" SortExpression="time"></asp:BoundField>
+                    <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price"></asp:BoundField>
+                    <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email"></asp:BoundField>
+                    <asp:TemplateField HeaderText="">
+                        <ItemTemplate>
+                            <asp:Button ID="btnAction" runat="server" Text="Delete" OnClick="Delete_Click"/>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+
             </asp:GridView>
             <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/Orders.xml"></asp:XmlDataSource>
         </div>

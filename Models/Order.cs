@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Xml;
 
 namespace Power_Store.Models
 {
@@ -18,6 +19,8 @@ namespace Power_Store.Models
 
         public string email { get; set; }
 
+        public string order_id { get; set; }
+
         public Order(string first_name, string last_name, string address, string country, string time, string price,string email)
         {
             this.first_name = first_name;
@@ -27,6 +30,14 @@ namespace Power_Store.Models
             this.time = time;
             this.price = price;
             this.email = email;
+            this.order_id = GenerateUniqueID();
+
+        }
+        private string GenerateUniqueID()
+        {
+            long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            string uniqueID = timestamp.ToString();
+            return uniqueID.Substring(uniqueID.Length-6, uniqueID.Length - 1);
         }
         public string AppendToXml()
         {
@@ -37,6 +48,7 @@ namespace Power_Store.Models
                 doc.Load(path);
                 System.Xml.XmlElement root = doc.DocumentElement;
                 System.Xml.XmlElement order = doc.CreateElement("Order");
+
                 order.SetAttribute("first_name", this.first_name);
                 order.SetAttribute("last_name", this.last_name);
                 order.SetAttribute("address", this.address);
@@ -44,6 +56,7 @@ namespace Power_Store.Models
                 order.SetAttribute("time", this.time);
                 order.SetAttribute("price", this.price);
                 order.SetAttribute("email", this.email);
+                
 
                 root.AppendChild(order);
                 doc.Save(path);

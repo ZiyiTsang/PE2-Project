@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Orders>
-	<Order first_name="John" last_name="Doe" address="123 Main St" country="USA" time="2023/12/16 10:00:00" price="19.99" email="johndoe@123.com" />
-	<Order first_name="Jane" last_name="Smith" address="456 Elm St" country="Canada" time="2023/12/16 11:00:00" price="29.99" email="janesmith@56.com" />
-	<Order first_name="Michael" last_name="Johnson" address="789 Oak St" country="Australia" time="2023/12/16 12:00:00" price="39.99" email="michaeljohnson@xmu.edu.cn" />
+  <Order id="45661" first_name="John" last_name="Doe" address="123 Main St" country="USA" time="2023/12/16 10:00:00" price="19.99" email="johndoe@123.com" />
+  <Order id="31147" first_name="Michael" last_name="Johnson" address="789 Oak St" country="Australia" time="2023/12/16 12:00:00" price="39.99" email="michaeljohnson@xmu.edu.cn" />
+  <Order id="41865" first_name="666" last_name="777" address="1234 Main St" country="United States" time="2023/12/17 17:24:01" price="40" email="66@222" />
 </Orders>
