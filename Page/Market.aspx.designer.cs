@@ -15,6 +15,24 @@ namespace Power_Store
     {
 
         /// <summary>
+        /// chkCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList chkCategories;
+
+        /// <summary>
+        /// PriceRange control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList PriceRange;
+
+        /// <summary>
         /// repeat_view_product control.
         /// </summary>
         /// <remarks>

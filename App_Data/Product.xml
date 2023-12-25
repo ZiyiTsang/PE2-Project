@@ -6,6 +6,7 @@
 		<Price>70</Price>
 		<Description>Pillow is a comfortable and high-quality pillow product that provides you with a good sleep experience and neck support, helping you achieve comfortable sleep and relaxed rest.</Description>
 		<ImageURL>~/Resource/Image/pillow.jpg</ImageURL>
+		<Category>houseware</Category>
 	</Product>
 	<Product>
 		<Id>2</Id>
@@ -13,6 +14,7 @@
 		<Price>2000</Price>
 		<Description>Newest Iphone</Description>
 		<ImageURL>~/Resource/Image/iphone.jpg</ImageURL>
+		<Category>SmartT</Category>
 	</Product>
 	<Product>
 		<Id>3</Id>
@@ -20,6 +22,7 @@
 		<Price>40</Price>
 		<Description>Pikachu stickers are carefully designed and produced, each sticker showcasing Pikachu's unique charm and cute image.</Description>
 		<ImageURL>~/Resource/Image/pikachu.jpg</ImageURL>
+		<Category>toys</Category>
 	</Product>
 	<Product>
 		<Id>4</Id>
@@ -27,6 +30,7 @@
 		<Price>3000</Price>
 		<Description>A laptop is a portable personal computer device that can be used for office, learning, entertainment, and various other tasks</Description>
 		<ImageURL>~/Resource/Image/laptop.png</ImageURL>
+		<Category>computing</Category>
 	</Product>
 	<Product>
 		<Id>5</Id>
@@ -34,6 +38,7 @@
 		<Price>3000</Price>
 		<Description>Mirrors help people observe their appearance, organize clothing, or apply makeup</Description>
 		<ImageURL>~/Resource/Image/Mirror.jpg</ImageURL>
+		<Category>houseware</Category>
 	</Product>
 	<Product>
 		<Id>6</Id>
@@ -41,5 +46,6 @@
 		<Price>39999</Price>
 		<Description>You will receive full marks for your PE final exam results in after purchasing.</Description>
 		<ImageURL>~/Resource/Image/fullMark.jpg</ImageURL>
+		<Category>SmartT</Category>
 	</Product>
 </Products>
