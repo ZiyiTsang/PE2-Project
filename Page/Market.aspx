@@ -32,14 +32,14 @@
                     <asp:ListItem Text="Sports" Value="sport" />
                     <asp:ListItem Text="Toys" Value="toys" />
                   </asp:CheckBoxList>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="#">Price Range</a></li>
                   <asp:CheckBoxList ID="PriceRange" runat="server" RepeatDirection="Vertical">
                     <asp:ListItem Text="under 50" Value="<50" />
                     <asp:ListItem Text="50-100" Value="50-100" />
                     <asp:ListItem Text="above 100" Value=">100" />
                   </asp:CheckBoxList>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
               <asp:Button ID="btnFilter" runat="server" Text="Apply" OnClick="btnFilter_Click" />
