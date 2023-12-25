@@ -104,6 +104,7 @@
   <ItemGroup>
     <Content Include="App_Data\Orders.xml" />
     <Content Include="App_Data\Product.xml" />
+    <Content Include="Scripts\Calculator.js" />
     <Content Include="Page\Admin_Orders.aspx" />
     <Content Include="Page\Dashboard.aspx" />
     <Content Include="Page\ItemDetail.aspx" />
