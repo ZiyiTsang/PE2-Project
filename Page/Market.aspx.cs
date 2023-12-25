@@ -48,27 +48,5 @@ namespace Power_Store
             string redirectUrl = "ItemDetail.aspx?good_id=" + good_id;
             Response.Redirect(redirectUrl);
         }
-        protected void btnFilter_Click(object sender, EventArgs e)
-        {
-            // Load XML data
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(Server.MapPath("~/App_Data/Product.xml"));
-
-            // Get all products from the repository
-            XmlNodeList productNodes = xmlDoc.SelectNodes("//Product");
-
-            // Perform the search based on the entered terms
-            var filteredProducts = productNodes.Cast<XmlNode>()
-                .Where(product =>
-                    (chkCategories.Items.Cast<ListItem>().Any(category => product.SelectSingleNode("Name").InnerText.Contains(category.Value)))
-                    && (string.IsNullOrEmpty(ddlOptions.SelectedValue) || product.SelectSingleNode("Option").InnerText == ddlOptions.SelectedValue)
-                // Add other filters based on your XML structure
-                )
-                .ToList();
-
-            // Bind the search results to your GridView or other controls
-            repeat_view_product.DataSource = filteredProducts;
-            repeat_view_product.DataBind();
-        }
     }
 }
