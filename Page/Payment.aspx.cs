@@ -35,43 +35,41 @@ namespace Power_Store.Page
             }
             ItemCount.Text = local_cart.itemSet.Count.ToString();
         }
+        
         protected void Submit_click(object sender, EventArgs e)
         {
-            Session["Cart"] = null;
-            
             Order order = get_order_detail();
-
-            string script = null;
-            string write_return = order.AppendToXml();
-            if (write_return.Equals("OK"))
+            if (order != null)
             {
-                script = "alert('Pay Successful! Thank you!');";
-                
-                //Response.Redirect("Market.aspx");
-            }
-            else
-            {
-                script= "alert('" + write_return + "');";
-                
-            }
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
-
-
-
-
+                string write_return = order.AppendToXml();
+                if (write_return.Equals("OK"))
+                {
+                    Session["Cart"] = null;
+                    ScriptManager.RegisterStartupScript(this, GetType(), "PaySuccess", "alert('Payment successful! Thank you!'); window.location='Market.aspx';", true);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "PayError", "alert('" + write_return + "');", true);
+                }
+            }else { ScriptManager.RegisterStartupScript(this, GetType(), "IncompleteFields", "alert('Please complete all the required fields!');", true); }
         }
+        
         protected Order get_order_detail()
         {
             string firstname = firstName.Text;
             string lastname = lastName.Text;
             string address = address1.Text;
             string country = country1.Text;
-            string time= DateTime.Now.ToString();
+            string time = DateTime.Now.ToString();
             string price = TotalPrice.Text;
             string email = emailFirst.Text + "@" + emailServer.Text;
-            return new Order(firstname, lastname, address, country, time, price,email);
-        }
-        
 
+            if (!string.IsNullOrEmpty(firstname) && !string.IsNullOrEmpty(lastname) && !string.IsNullOrEmpty(email) &&
+            !string.IsNullOrEmpty(address) && !string.IsNullOrEmpty(country))
+            {
+                return new Order(firstname, lastname, address, country, time, price, email);
+            }
+            else { return null; }
+        }
     }
 }
