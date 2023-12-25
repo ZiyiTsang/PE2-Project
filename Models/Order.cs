@@ -37,7 +37,7 @@ namespace Power_Store.Models
         {
             long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
             string uniqueID = timestamp.ToString();
-            return uniqueID.Substring(uniqueID.Length-6, uniqueID.Length - 1);
+            return uniqueID.Substring(uniqueID.Length-6, 6);
         }
         public string AppendToXml()
         {
@@ -56,6 +56,7 @@ namespace Power_Store.Models
                 order.SetAttribute("time", this.time);
                 order.SetAttribute("price", this.price);
                 order.SetAttribute("email", this.email);
+                order.SetAttribute("id", this.order_id);
                 
 
                 root.AppendChild(order);
