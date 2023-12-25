@@ -15,6 +15,7 @@ namespace Power_Store
         }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            /*
             // Get the search terms entered by the user
             string searchTerms = txtSearch.Text.Trim().ToLower(); // Convert to lowercase for case-insensitive search
 
@@ -31,7 +32,7 @@ namespace Power_Store
 
             // Bind the search results to your GridView or other controls
             repeat_view_product.DataSource = searchResults;
-            repeat_view_product.DataBind();
+            repeat_view_product.DataBind();*/
         }
     }
 }

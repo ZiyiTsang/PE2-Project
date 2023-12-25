@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace Power_Store
 {
@@ -50,6 +51,7 @@ namespace Power_Store
         }
         protected void btnFilter_Click(object sender, EventArgs e)
         {
+            /*
             // Load XML data
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(Server.MapPath("~/App_Data/Product.xml"));
@@ -68,7 +70,7 @@ namespace Power_Store
 
             // Bind the search results to your GridView or other controls
             repeat_view_product.DataSource = filteredProducts;
-            repeat_view_product.DataBind();
+            repeat_view_product.DataBind();*/
         }
     }
 }
