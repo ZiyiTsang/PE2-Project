@@ -127,6 +127,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Page\NothingBuy.aspx" />
+    <Content Include="Page\Nothing_filter.aspx" />
     <Content Include="Page\Payment.aspx" />
     <Content Include="Resource\Image\fullMark.jpg" />
     <Content Include="Resource\Image\iphone.jpg" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="Page\NothingBuy.aspx.designer.cs">
       <DependentUpon>NothingBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Nothing_filter.aspx.cs">
+      <DependentUpon>Nothing_filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Nothing_filter.aspx.designer.cs">
+      <DependentUpon>Nothing_filter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>

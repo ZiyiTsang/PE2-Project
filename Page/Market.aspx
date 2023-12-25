@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Main.Master" AutoEventWireup="true" CodeBehind="Market.aspx.cs" Inherits="Power_Store.Customer_Market" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
-        <main>
+
+    <main>
         <section class="pt-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
@@ -16,36 +16,9 @@
             </div>
         </section>
         <form runat="server">
-            <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/>
-                </svg>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Category</a></li>
-                  <asp:CheckBoxList ID="chkCategories" runat="server" RepeatDirection="Vertical">
-                    <asp:ListItem Text="Computing" Value="computing" />
-                    <asp:ListItem Text="Smart Tech" Value="smartT" />
-                    <asp:ListItem Text="Houseware" Value="houseware" />
-                    <asp:ListItem Text="Health & Care" Value="H&C" />
-                    <asp:ListItem Text="Sports" Value="sport" />
-                    <asp:ListItem Text="Toys" Value="toys" />
-                  </asp:CheckBoxList>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Price Range</a></li>
-                  <asp:CheckBoxList ID="PriceRange" runat="server" RepeatDirection="Vertical">
-                    <asp:ListItem Text="under 50" Value="<50" />
-                    <asp:ListItem Text="50-100" Value="50-100" />
-                    <asp:ListItem Text="above 100" Value=">100" />
-                  </asp:CheckBoxList>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-              <asp:Button ID="btnFilter" runat="server" Text="Apply" OnClick="btnFilter_Click" />
-            </div>
-        <div class="album py-2 bg-body-tertiary">
             
+            <div class="album py-2 bg-body-tertiary">
+
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <asp:Repeater ID="repeat_view_product" runat="server">
@@ -72,8 +45,8 @@
                         </asp:Repeater>
                     </div>
                 </div>
-        </div>
-      </form>
+            </div>
+        </form>
     </main>
 </asp:Content>
 
