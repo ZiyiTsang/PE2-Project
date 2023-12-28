@@ -14,34 +14,67 @@ namespace Power_Store.Page
         public Item item = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (Session["Repo"] == null)
             {
                 Session["Repo"] = Repo.GetInstance();
             }
             repo = (Repo)Session["Repo"];
-            int good_id = int.Parse(Request.QueryString["good_id"]);
-            // item 是当前访问商品的实例
-            item = repo.Product_list[good_id];
+
+            if (Request.QueryString["good_id"] != null && int.TryParse(Request.QueryString["good_id"], out int good_id))
+            {
+                if (repo.Product_list.ContainsKey(good_id))
+                {
+                    item = repo.Product_list[good_id];
+                    LoadItemDetails();
+                }
+                else
+                {
+                    // Handle the case where the product with the given ID is not found
+                }
+            }
+            else
+            {
+                // Handle the case where the "good_id" parameter is not present or not a valid integer
+            }
+        }
+
+        private void LoadItemDetails()
+        {
+            
+            ItemImg.ImageUrl = item.ItemImage;
+            ItemName.Text = item.ItemName;
+            ItemDescription.Text = item.ItemDescription;
+            ItemPrice.Text = "RM" + item.ItemPrice.ToString();
         }
         protected void Buy_click(object sender, EventArgs e)
         {
             Cart local_cart = (Cart)Session["Cart"];
             Button button = (Button)sender;
-            int good_id = int.Parse(button.CommandArgument.ToString());
-            Item good = repo.Product_list[good_id];
-            local_cart.AddItem(good);
-            Session["Cart"] = local_cart;
-            string script = "alert('Add to cart successful');";
-            ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
 
-        }
-
-        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (int.TryParse(button.CommandArgument.ToString(), out int good_id))
+            {
+                
+                if (repo.Product_list.ContainsKey(good_id))
+                {
+                    Item good = repo.Product_list[good_id];
+                    local_cart.AddItem(good);
+                    Session["Cart"] = local_cart;
+                    string script = "alert('Add to cart successful');";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+                }
+                else
+                {
+                    // Handle the case where the product with the given ID is not found
+                }
+            }
+            else
+            {
+                
+                string script = "alert('Invalid item ID');";
+                ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+            }
         }
     }
-    
+
 
 }
