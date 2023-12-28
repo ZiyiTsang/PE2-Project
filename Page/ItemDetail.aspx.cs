@@ -27,15 +27,9 @@ namespace Power_Store.Page
                     item = repo.Product_list[good_id];
                     LoadItemDetails();
                 }
-                else
-                {
-                    // Handle the case where the product with the given ID is not found
-                }
+                
             }
-            else
-            {
-                // Handle the case where the "good_id" parameter is not present or not a valid integer
-            }
+           
         }
 
         private void LoadItemDetails()
@@ -62,10 +56,7 @@ namespace Power_Store.Page
                     string script = "alert('Add to cart successful');";
                     ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
                 }
-                else
-                {
-                    // Handle the case where the product with the given ID is not found
-                }
+                
             }
             else
             {
