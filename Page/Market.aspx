@@ -25,7 +25,9 @@
                             <ItemTemplate>
                                 <div class="col">
                                     <div class="card shadow-sm">
-                                        <asp:Image ID="Image1" runat="server" CssClass="bd-placeholder-img card-img-top" Width="100%" Height="225%" ImageUrl='<%#Eval("ItemImage") %>' />
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/Page/ItemDetail.aspx?good_id=" + Eval("ItemID") %>'>
+                                        <asp:Image ID="Image1" runat="server" CssClass="bd-placeholder-img card-img-top" ImageUrl='<%# Eval("ItemImage") %>' Width="100" Height="225%" />
+                                        </asp:HyperLink>
                                         <div class="card-body">
                                             <div class="my-1">
                                                 <asp:Label ID="ItemName" runat="server" Text='<%#Eval("ItemName") %>' Font-Bold="True" Font-Size="Larger"></asp:Label>
