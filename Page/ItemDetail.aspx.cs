@@ -36,6 +36,11 @@ namespace Power_Store.Page
             ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
 
         }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 

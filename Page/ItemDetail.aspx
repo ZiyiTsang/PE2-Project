@@ -4,7 +4,7 @@
         <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
    
     <div align="center">
-        <asp:DataList ID="DataList1" runat="server" DataKeyField="ProductId" DataSourceID="SqlDataSource1">
+        <asp:DataList ID="DataList1" runat="server" DataKeyField="ProductId" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
             <ItemTemplate>
                 <div class="container">
                     <div class="row">
