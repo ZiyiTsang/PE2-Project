@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Main.Master" AutoEventWireup="true" CodeBehind="ItemDetail.aspx.cs" Inherits="Power_Store.Page.ItemDetail" %>
 
+       
         <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
    
     <div align="center">
@@ -9,13 +10,16 @@
                     <div class="row">
                         <div class="col-12-lg mt-2">
                             <div class="card" style="width:28rem;">
-                                <asp:Image CssClass="card-img-yop" IF="Image1" runat="server" ImageUrl='<%# Eval("ImagePath") %>'
-                                    AlternateText="Product Image" />
+                                 <asp:Image ID="Image1" runat="server" CssClass="bd-placeholder-img card-img-top" Width="100%" Height="225%" ImageUrl='<%#Eval("ItemImage") %>' />
+                                
                                 <div class="'card-body bg-dark">
-                                    <h5 class="card-title text-white"><%# Eval("Name") %></h5>
-                                    <h6 class="card-title text-white"><%# Eval("Price") %></h6>
-                                    <p class="card-title text-white"><%# Eval("Description") %></p>
-                                    <asp: Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Add to the cart" CommandArgument='<%# Eval("Item") %>'
+                                     <asp:Label ID="ItemName" runat="server" Text='<%#Eval("ItemName") %>' Font-Bold="True" Font-Size="Larger"></asp:Label>
+                                     <br />
+                                     <asp:Label ID="ItemDescription" runat="server" Text='<%#Eval("ItemDescription") %>'></asp:Label>
+                                     <br />
+                                    <asp:Label ID="ItemPrice" runat="server" Text='<%#"RM" + Eval("ItemPrice") %>' CssClass="text-body-secondary"></asp:Label>
+                                    </br>
+                                   <asp:Button ID="AddToCart" runat="server" Text="Add to cart" type="button" OnClick="Buy_click" CommandArgument='<%#Bind("ItemID")%>' CssClass="btn btn-sm btn-outline-secondary" />
                                 </div>
                             </div>
                         </div>
@@ -25,27 +29,10 @@
 
         </asp:DataList>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-        <SelectParameters>
-            <asp:QueryStringParameter Name="ProductId" QueryStringField="id" Type="Int32" />
-        </SelectParameters>
-
     </div>
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-   
-
-    <p>ID:<%=item.ItemID%></p>
-    <p>Name:<%=item.ItemName%></p>
-    <p>Price:<%=item.ItemPrice%></p>
-    <p>Description:<%=item.ItemDescription%></p>
-    <p>ImagePath:<%=item.ItemImage%></p>
 
 
 </asp:Content>
+   
    
 
