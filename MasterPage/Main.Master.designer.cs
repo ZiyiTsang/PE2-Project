@@ -15,6 +15,15 @@ namespace Power_Store
     {
 
         /// <summary>
+        /// user_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label user_name;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

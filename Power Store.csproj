@@ -104,6 +104,8 @@
   <ItemGroup>
     <Content Include="App_Data\Orders.xml" />
     <Content Include="App_Data\Product.xml" />
+    <Content Include="App_Data\UserInfo.xml" />
+    <Content Include="Page\LoginPage.aspx" />
     <Content Include="Scripts\Calculator.js" />
     <Content Include="Page\Admin_Orders.aspx" />
     <Content Include="Page\Dashboard.aspx" />
@@ -213,6 +215,7 @@
     </Compile>
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Repo.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Page\Admin_Orders.aspx.cs">
       <DependentUpon>Admin_Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,6 +236,13 @@
     </Compile>
     <Compile Include="Page\ItemDetail.aspx.designer.cs">
       <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Market.aspx.cs">
       <DependentUpon>Market.aspx</DependentUpon>

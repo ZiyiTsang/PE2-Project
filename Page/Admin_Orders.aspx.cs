@@ -14,7 +14,11 @@ namespace Power_Store.Page
         private string path = HttpContext.Current.Server.MapPath("~/App_Data/Orders.xml");
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["role"] == null || Session["role"].ToString() != "admin")
+            {
+                Session["need_role"]="admin";
+                Response.Redirect("LoginPage.aspx");
+            }
         }
         protected void Delete_Click(object sender, EventArgs e)
         {
@@ -43,6 +47,7 @@ namespace Power_Store.Page
                 }
             }
         }
+        
 
 
 
