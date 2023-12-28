@@ -24,18 +24,19 @@ namespace Power_Store.Page
             // item 是当前访问商品的实例
             item = repo.Product_list[good_id];
         }
-    }
+        protected void Buy_click(object sender, EventArgs e)
+        {
+            Cart local_cart = (Cart)Session["Cart"];
+            Button button = (Button)sender;
+            int good_id = int.Parse(button.CommandArgument.ToString());
+            Item good = repo.Product_list[good_id];
+            local_cart.AddItem(good);
+            Session["Cart"] = local_cart;
+            string script = "alert('Add to cart successful');";
+            ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
 
-    protected void Buy_click(object sender, EventArgs e)
-    {
-        Cart local_cart = (Cart)Session["Cart"];
-        Button button = (Button)sender;
-        int good_id = int.Parse(button.CommandArgument.ToString());
-        Item good = repo.Product_list[good_id];
-        local_cart.AddItem(good);
-        Session["Cart"] = local_cart;
-        string script = "alert('Add to cart successful');";
-        ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
-
+        }
     }
+    
+
 }
