@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<userinfo>
+  <user>
+    <uid>swe2009499</uid>
+    <alt>hongchang</alt>
+    <psw>root</psw>
+    <type>Admin</type>
+  </user>
+  <user>
+    <uid>cme1909120</uid>
+    <alt>zzy</alt>
+    <psw>test</psw>
+    <type>Customer</type>
+  </user>
+  <user>
+    <uid>123456</uid>
+    <alt>say ken</alt>
+    <psw>1234</psw>
+    <type>Customer</type>
+  </user>
+</userinfo>

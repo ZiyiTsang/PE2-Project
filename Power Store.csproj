@@ -140,7 +140,7 @@
     <Content Include="Resource\Image\pillow.jpg" />
     <Content Include="MasterPage\Main.Master" />
     <Content Include="MasterPage\Admin.Master" />
-    <None Include="Properties\PublishProfiles\PowerStore - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Power-Store - Web Deploy.pubxml" />
     <None Include="Resource\Image\WatterBottle.jpg" />
     <Content Include="Resource\Image\shop.jfif" />
     <Content Include="Resource\Image\TV.jpg" />

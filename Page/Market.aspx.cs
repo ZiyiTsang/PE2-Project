@@ -65,6 +65,7 @@ namespace Power_Store
             string redirectUrl = "ItemDetail.aspx?good_id=" + good_id;
             Response.Redirect(redirectUrl);
         }
+
         
     }
 }

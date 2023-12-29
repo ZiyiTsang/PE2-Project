@@ -16,7 +16,7 @@
             </div>
         </section>
         <form runat="server">
-            
+
             <div class="album py-2 bg-body-tertiary">
 
                 <div class="container">
@@ -26,18 +26,23 @@
                                 <div class="col">
                                     <div class="card shadow-sm">
                                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/Page/ItemDetail.aspx?good_id=" + Eval("ItemID") %>'>
-                                        <asp:Image ID="Image1" runat="server" CssClass="bd-placeholder-img card-img-top" ImageUrl='<%# Eval("ItemImage") %>' Width="100" Height="225%" />
+                                            <asp:Image ID="Image1" runat="server" CssClass="bd-placeholder-img card-img-top" ImageUrl='<%# Eval("ItemImage") %>' />
                                         </asp:HyperLink>
                                         <div class="card-body">
-                                            <div class="my-1">
-                                                <asp:Label ID="ItemName" runat="server" Text='<%#Eval("ItemName") %>' Font-Bold="True" Font-Size="Larger"></asp:Label>
-                                                <br />
-                                                <asp:Label ID="ItemDescription" runat="server" Text='<%#Eval("ItemDescription") %>'></asp:Label>
-                                                <br />
+                                            <div class="my-1 d-flex justify-content-between align-items-center">
+                                                <div class="text-center ">
+                                                    <asp:Label ID="ItemName" runat="server" Text='<%#Eval("ItemName") %>' Font-Bold="True" Font-Size="Larger"></asp:Label>
+                                                </div>
+                                                <div class="text-body-secondary">
+                                                    <asp:Label ID="ItemPrice" runat="server" Text='<%#"RM" + Eval("ItemPrice") %>'></asp:Label>
+                                                </div>
                                             </div>
-                                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                                <asp:Button ID="AddToCart" runat="server" Text="Add to cart" type="button" OnClick="Buy_click" CommandArgument='<%#Bind("ItemID")%>' CssClass="btn btn-sm btn-outline-secondary" />
-                                                <asp:Label ID="ItemPrice" runat="server" Text='<%#"RM" + Eval("ItemPrice") %>' CssClass="text-body-secondary"></asp:Label>
+
+                                            <div class="my-2 ">
+                                                <asp:Button ID="AddToCart" runat="server" Text="Add to cart" type="button" OnClick="Buy_click" CommandArgument='<%#Bind("ItemID")%>' CssClass="btn btn-sm btn-outline-primary" />
+                                                
+                                                    <asp:Button ID="Button1" runat="server" Text="Detail" type="button" OnClick="detail_click" CommandArgument='<%#Bind("ItemID")%>' CssClass="btn btn-sm btn-outline-warning" />
+                                                
                                             </div>
                                         </div>
                                     </div>

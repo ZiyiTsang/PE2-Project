@@ -40,6 +40,11 @@ namespace Power_Store.Page
             ItemDescription.Text = item.ItemDescription;
             ItemPrice.Text = "RM" + item.ItemPrice.ToString();
         }
+        protected void Btn_back(object sender, EventArgs e)
+        {
+            //redirect to previous page
+            Response.Redirect("Market.aspx");
+        }
         protected void Buy_click(object sender, EventArgs e)
         {
             Cart local_cart = (Cart)Session["Cart"];

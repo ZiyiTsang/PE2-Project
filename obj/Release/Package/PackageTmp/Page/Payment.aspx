@@ -25,25 +25,29 @@
                     <ItemTemplate>
                         <li class="list-group-item d-flex justify-content-between lh-sm">
                             <div class="row">
-                                <div class="col-1 mx-auto">
-                                    <input class="form-check-input" type="checkbox" value="" style="height: 30px; width: 30px;">
+                                <div class="col-2">
+                                    <input class="form-check-input cart_item_checkbox" type="checkbox" value="" style="height: 30px; width: 30px;" checked onclick="calculateTotalPrice()">
                                 </div>
-                                <div class="col">
+                                <div class="col-10">
                                     <asp:Label ID="ItemName" runat="server" Text='<%#Eval("ItemName") %>' CssClass="my-0"></asp:Label>
                                     <br />
                                     <asp:Label ID="ItemDescription" runat="server" Text='<%#Eval("ItemDescription") %>' CssClass="text-body-secondary"></asp:Label>
                                 </div>
+
                             </div>
                             <span class="text-body-secondary">
                                 <asp:Label ID="ItemPrice" runat="server" Text='<%#Eval("ItemPrice") %>'></asp:Label></span>
+
+
+
                         </li>
                     </ItemTemplate>
                 </asp:Repeater>
 
 
                 <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (RM)</span>
-                    <asp:Label ID="TotalPrice" runat="server" Text="0" Font-Bold="True"></asp:Label>
+                    <span class="">Total (RM)</span>
+                    <asp:Label ID="TotalPrice" runat="server" Text="0" Font-Bold="True" CssClass=""></asp:Label>
                 </li>
             </ul>
         </div>

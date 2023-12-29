@@ -5,17 +5,21 @@
         <main>
             <section class="pt-5 text-center container">
                 <form runat="server">
-                    <div class="row py-lg-5">
-                        <div class="col-lg-6 col-md-8 mx-auto">
+                    <div class="py-lg-5">
+                        <div class="card col-lg-6 col-md-8 mx-auto">
                             <div class="card-body bg-grey">
-                                <asp:Image ID="ItemImg" runat="server" CssClass="d-block mx-auto mb-1" Width="100" Height="100" />
-                                <asp:Label ID="ItemName" runat="server" Font-Bold="True" Font-Size="Larger"></asp:Label>
+                                <asp:Image ID="ItemImg" runat="server" CssClass="d-block mx-auto mb-1" Width="100%" Height="100%" />
+                                <asp:Label ID="ItemName" runat="server" Font-Bold="True" Font-Size="Larger" CssClass="py-4"></asp:Label>
                                 <br />
-                                <asp:Label ID="ItemDescription" runat="server"></asp:Label>
                                 <br />
-                                <asp:Label ID="ItemPrice" runat="server" CssClass="text-body-secondary"></asp:Label>
+                                <asp:Label ID="ItemDescription" runat="server" CssClass="py-4"></asp:Label>
                                 <br />
-                                <asp:Button ID="AddToCart" runat="server" Text="Add to cart" type="button" OnClick="Buy_click" CssClass="btn btn-sm btn-outline-secondary" />
+                                <br />
+                                <asp:Label ID="ItemPrice" runat="server" CssClass="text-body-secondary py-4"></asp:Label>
+                                <br />
+                                <br />
+                                <asp:Button ID="AddToCart" runat="server" Text="Add to cart" type="button" OnClick="Buy_click" CssClass="btn btn-primary px-2" />
+                                <asp:Button ID="Back" runat="server" Text="Back to Market" type="buttok" CssClass="btn btn-success px-2" OnClick="Btn_back" />
                             </div>
                         </div>
                     </div>
@@ -24,6 +28,6 @@
         </main>
     </div>
 </asp:Content>
-   
-   
+
+
 
