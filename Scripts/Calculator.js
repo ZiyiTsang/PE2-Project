@@ -5,7 +5,7 @@ function calculateTotalPrice() {
 
     Array.from(checkboxes).forEach(function (checkbox) {
         if (checkbox.checked) {
-            var itemPrice = checkbox.parentElement.parentElement.nextElementSibling.firstElementChild.innerText;
+            var itemPrice = checkbox.parentElement.parentElement.lastElementChild.firstElementChild.innerText;
             totalPrice += parseFloat(itemPrice);
         }
     });

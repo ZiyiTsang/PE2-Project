@@ -23,9 +23,9 @@
 
                 <asp:Repeater ID="paymentRepeater" runat="server">
                     <ItemTemplate>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <li class="list-group-item lh-sm">
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-1">
                                     <input class="form-check-input cart_item_checkbox" type="checkbox" value="" style="height: 30px; width: 30px;" checked onclick="calculateTotalPrice()">
                                 </div>
                                 <div class="col-10">
@@ -33,10 +33,12 @@
                                     <br />
                                     <asp:Label ID="ItemDescription" runat="server" Text='<%#Eval("ItemDescription") %>' CssClass="text-body-secondary"></asp:Label>
                                 </div>
+                                <div class="col-1">
+                                    <asp:Label ID="ItemPrice" runat="server" Text='<%#Eval("ItemPrice") %>'></asp:Label></div>
 
                             </div>
-                            <span class="text-body-secondary">
-                                <asp:Label ID="ItemPrice" runat="server" Text='<%#Eval("ItemPrice") %>'></asp:Label></span>
+
+
 
 
 
@@ -45,9 +47,12 @@
                 </asp:Repeater>
 
 
-                <li class="list-group-item d-flex justify-content-between">
-                    <span class="">Total (RM)</span>
-                    <asp:Label ID="TotalPrice" runat="server" Text="0" Font-Bold="True" CssClass=""></asp:Label>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-11">Total (RM)</div>
+                        <div class="col-1"><asp:Label ID="TotalPrice" runat="server" Text="0" Font-Bold="True" CssClass=""></asp:Label></div>
+                    </div>
+
                 </li>
             </ul>
         </div>

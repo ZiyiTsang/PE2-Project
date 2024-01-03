@@ -4,7 +4,11 @@
     <br />
     <br />
     <br />
-    <br />
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Order Details</h1>
+</div>
     <div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="XmlDataSource1" CssClass="table table-striped">
             <Columns>

@@ -51,7 +51,7 @@ namespace Power_Store.Page
             }
             else
             {
-                lblUserType.Text = "Comfirm Password";
+                lblUserType.Text = "Confirm Password";
                 psdAgain.Visible = true;
                 ddlUserType.Visible = false;
                 btnSubmit.Text = "Register";
