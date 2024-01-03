@@ -66,7 +66,7 @@ namespace Power_Store.Page
             else
             {
                 
-                string script = "alert('Invalid item ID');";
+                string script = "alert('Please go back to the market page and try again');";
                 ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
             }
         }
