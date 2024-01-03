@@ -18,7 +18,7 @@
                                 <asp:Label ID="ItemPrice" runat="server" CssClass="text-body-secondary py-4"></asp:Label>
                                 <br />
                                 <br />
-                                <asp:Button ID="AddToCart" runat="server" Text="Add to cart" type="button" OnClick="Buy_click" CssClass="btn btn-primary px-2" />
+            
                                 <asp:Button ID="Back" runat="server" Text="Back to Market" type="buttok" CssClass="btn btn-success px-2" OnClick="Btn_back" />
                             </div>
                         </div>

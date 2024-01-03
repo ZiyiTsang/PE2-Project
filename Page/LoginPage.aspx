@@ -29,14 +29,16 @@
                         <label for="txtUsername" class="col-sm-4 col-form-label fw-bold">Username:</label>
                         <div class="col-sm-4">
                             <asp:TextBox ID="txtUsername" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:Label ID="txtUsername_label" CssClass="form-control" runat="server" Visible="false"></asp:Label>
                         </div>
                     </div>
 
                     <!-- Password Row -->
                     <div class="mb-2 row justify-content-center">
-                        <label for="txtPassword" class="col-sm-4 col-form-label fw-bold">Password:</label>
+                        <asp:Label ID="label_password" runat="server" CssClass="col-sm-4 col-form-label fw-bold">Password:</asp:Label>
                         <div class="col-sm-4">
                             <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+
                         </div>
                     </div>
 
@@ -49,6 +51,7 @@
                                 <asp:ListItem Text="Admin" Value="admin" />
                             </asp:DropDownList>
                             <asp:TextBox ID="psdAgain" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:Label ID="role_display" CssClass="form-control" runat="server" Visible="false"></asp:Label>
                         </div>
                     </div>
 

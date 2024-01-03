@@ -42,6 +42,24 @@ namespace Power_Store.Page
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
         /// <summary>
+        /// txtUsername_label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtUsername_label;
+
+        /// <summary>
+        /// label_password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_password;
+
+        /// <summary>
         /// txtPassword control.
         /// </summary>
         /// <remarks>
@@ -76,6 +94,15 @@ namespace Power_Store.Page
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox psdAgain;
+
+        /// <summary>
+        /// role_display control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label role_display;
 
         /// <summary>
         /// register_link control.

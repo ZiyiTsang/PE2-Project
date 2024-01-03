@@ -60,7 +60,7 @@ namespace Power_Store.Page
             string lastname = lastName.Text;
             string address = address1.Text;
             string country = country1.Text;
-            string time = DateTime.Now.ToString();
+            string time = DateTime.Now.ToString("yyyy / MM / dd HH: mm:ss");
             string price = TotalPrice.Text;
             string email = emailFirst.Text + "@" + emailServer.Text;
 

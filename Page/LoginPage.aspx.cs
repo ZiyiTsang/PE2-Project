@@ -19,6 +19,13 @@ namespace Power_Store.Page
             {
                 state= Request.Params["state"];
             }
+            if (Session["role"] != null)
+            {
+               
+                state = "logout";
+                
+                
+            }
             if (!IsPostBack)
             {
                 if (Request.UrlReferrer != null)
@@ -26,8 +33,18 @@ namespace Power_Store.Page
                     
                     if (Session["need_role"]=="admin")
                     {
-                        lblError.Text = "Please login as Admin";
+                        if (Session["user_name"] == null)
+                        {
+                            lblError.Text = "Please login in as Admin";
+                            state = "login";
+                        }
+                        else
+                        {
+                            lblError.Text = "Please logout customer account first, then login in as Admin";
+                            state = "logout";
+                        }
                         Session["need_role"]=null;
+                        
 
                     }
                     else
@@ -49,6 +66,23 @@ namespace Power_Store.Page
                 login_link.Visible = false;
                 register_link.Visible = true;
             }
+            else if(state=="logout")
+            {
+                label_password.Visible = false;
+                txtPassword.Visible = false;
+                lblUserType.Visible = true;
+                psdAgain.Visible = false;
+                role_display.Visible = true;
+                role_display.Text = String.Format("{0}",Session["role"]);
+                btnSubmit.Text = "Logout";
+                ddlUserType.Visible = false;
+                register_link.Visible = false;
+                login_link.Visible = false;
+                txtUsername_label.Visible=true;
+                txtUsername_label.Text = String.Format("{0}", Session["user_name"]);
+                txtUsername.Visible = false;
+
+            }
             else
             {
                 lblUserType.Text = "Confirm Password";
@@ -57,6 +91,7 @@ namespace Power_Store.Page
                 btnSubmit.Text = "Register";
                 login_link.Visible = true;
                 register_link.Visible = false;
+                role_display.Visible = false;
             }
             
 
@@ -111,6 +146,13 @@ namespace Power_Store.Page
             // If no match is found, show an alert
             ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Invalid login information, please try again!');", true);
         }
+        private void logout()
+        {
+            Session["role"] = null;
+            Session["need_role"] = null;
+            Session["user_name"] = null;
+            Response.Redirect("Market.aspx");
+        }
         private void register()
         {
             string name= txtUsername.Text;
@@ -139,6 +181,11 @@ namespace Power_Store.Page
             if(state=="login")
             {
                 login();
+            }
+            else if(state=="logout")
+            {
+                logout();
+                
             }
             else
             {
