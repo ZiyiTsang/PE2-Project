@@ -42,35 +42,12 @@ namespace Power_Store.Page
         }
         protected void Btn_back(object sender, EventArgs e)
         {
-            //redirect to previous page
+           
             Response.Redirect("Market.aspx");
         }
-        protected void Buy_click(object sender, EventArgs e)
-        {
-            Cart local_cart = (Cart)Session["Cart"];
-            Button button = (Button)sender;
-
-            if (int.TryParse(button.CommandArgument.ToString(), out int good_id))
-            {
-                
-                if (repo.Product_list.ContainsKey(good_id))
-                {
-                    Item good = repo.Product_list[good_id];
-                    local_cart.AddItem(good);
-                    Session["Cart"] = local_cart;
-                    string script = "alert('Add to cart successful');";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
-                }
-                
-            }
-            else
-            {
-                
-                string script = "alert('Please go back to the market page and try again');";
-                ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
-            }
-        }
+        
     }
 
 
 }
+
